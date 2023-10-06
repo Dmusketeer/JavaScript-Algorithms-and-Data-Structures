@@ -183,3 +183,9 @@ In summary, objects and arrays have different time and space complexities, and t
 
 
 ## Math Algorithms
+- Fibonacci sequence [<input type="checkbox" checked>]
+- factorial of a number
+- Prime Number
+- Power of two
+- Recursion
+- Fibonacci sequence with recursion
