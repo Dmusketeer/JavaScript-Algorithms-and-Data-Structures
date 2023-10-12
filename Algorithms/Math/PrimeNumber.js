@@ -15,6 +15,20 @@ function isPrime(number) {
   return true;
 }
 
+// optimize solution
+
+function isPrime(number) {
+  if (number < 2) {
+    return false;
+  }
+  for (let i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
 console.log(isPrime(2)); //true
 console.log(isPrime(3)); //true
 console.log(isPrime(4)); //false
