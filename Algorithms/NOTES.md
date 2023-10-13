@@ -181,11 +181,80 @@ Arrays have a time complexity of O(1) for accessing an element, which means that
 
 In summary, objects and arrays have different time and space complexities, and the choice of data structure depends on the specific use case and requirements.
 
+## Recursion
+### What is recursion ?
+
+Recursion is a programming concept in which a function calls itself to solve a problem. Instead of solving a problem in a single iteration, a recursive function divides the problem into smaller, often identical, subproblems and solves each subproblem individually.
+
+Recursion consists of two main parts:
+
+1. Base Case: A condition that determines when the recursion should stop. It defines the simplest form of the problem that can be solved directly.
+
+2. Recursive Case: The part of the function where it calls itself with a modified input, moving closer to the base case. This step breaks down the original problem into smaller, manageable subproblems.
+
+A classic example of recursion is the computation of the factorial of a number. The factorial of a non-negative integer `n`, denoted as `n!`, is calculated as follows:
+
+```
+n! = n * (n-1) * (n-2) * ... * 2 * 1
+```
+
+A recursive function to compute the factorial of `n` can be defined as follows:
+
+```js
+function factorial(n) {
+  // Base case: 0! and 1! are defined as 1.
+  if (n === 0 || n === 1) {
+    return 1;
+  }
+  // Recursive case: n! = n * (n-1)!
+  else {
+    return n * factorial(n - 1);
+  }
+}
+
+// Example usage:
+const result = factorial(5); // Computes 5! = 5 * 4 * 3 * 2 * 1 = 120
+console.log(result); // Outputs 120
+
+```
+
+Recursion is a powerful and elegant way to solve problems that can be broken down into smaller, similar subproblems. However, it's essential to ensure that the base case is reached to prevent infinite recursion and stack overflow errors. Recursion is commonly used in algorithms for tasks like tree traversal, sorting (e.g., quicksort and mergesort), and solving complex mathematical problems.
 
 ## Math Algorithms
 - Fibonacci sequence [<input type="checkbox" checked>]
-- factorial of a number
-- Prime Number
-- Power of two
-- Recursion
-- Fibonacci sequence with recursion
+- factorial of a number[<input type="checkbox" checked>]
+- Prime Number [<input type="checkbox" checked>]
+- Power of two [<input type="checkbox" checked>]
+- Recursion [<input type="checkbox" checked>]
+- Fibonacci sequence with recursion [<input type="checkbox" checked>]
+
+
+You can compute the Fibonacci sequence using a recursive JavaScript function. The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones. Here's a recursive implementation:
+
+```javascript
+function fibonacci(n) {
+  if (n <= 0) {
+    return 0;
+  } else if (n === 1) {
+    return 1;
+  } else {
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  }
+}
+
+// Example usage:
+const n = 10; // Change n to compute the nth Fibonacci number
+const result = fibonacci(n);
+console.log(`The ${n}-th Fibonacci number is: ${result}`);
+```
+
+In this code:
+
+- The base cases are when `n` is 0 and 1. In these cases, we return 0 and 1, respectively.
+- For any other value of `n`, we use recursion to calculate the Fibonacci number by summing the results of the two previous numbers in the sequence (i.e., `fibonacci(n - 1)` and `fibonacci(n - 2)`).
+
+Keep in mind that while recursion is a simple way to calculate Fibonacci numbers, it can be inefficient for large values of `n` due to repeated calculations. For improved efficiency, consider using dynamic programming or memoization to store and reuse previously computed Fibonacci numbers.
+
+
+
+
