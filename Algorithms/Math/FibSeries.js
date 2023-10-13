@@ -12,3 +12,5 @@ const findFibonacciSeries = (n) => {
 };
 
 console.log(findFibonacciSeries(10));
+
+// Big-O : O(n)
