@@ -256,5 +256,62 @@ In this code:
 Keep in mind that while recursion is a simple way to calculate Fibonacci numbers, it can be inefficient for large values of `n` due to repeated calculations. For improved efficiency, consider using dynamic programming or memoization to store and reuse previously computed Fibonacci numbers.
 
 
+## Searching Algorithms
+
+Searching algorithms are a set of procedures and techniques used to locate specific data within a collection, typically a dataset or data structure, such as an array, list, or database. These algorithms are a fundamental component of computer science and are widely used in various applications, including information retrieval, data analysis, and database management. The goal of a searching algorithm is to efficiently locate a particular element or item in the data, given some search criteria or key.
+
+Searching algorithms are categorized into two main types:
+
+1. **Sequential Search Algorithms:**
+   - These algorithms involve examining each element in the collection one by one until the desired element is found or the entire collection has been searched. They are suitable for unsorted or small datasets.
+   - Examples of sequential search algorithms include linear search and linear probing (used in hash tables).
+
+2. **Binary Search and Beyond:**
+   - These algorithms are designed for sorted datasets and use more advanced techniques to quickly locate the desired element.
+   - Binary search is a commonly used algorithm that efficiently searches for an element in a sorted collection by repeatedly dividing the search interval in half. It has a time complexity of O(log n).
+   - Other search algorithms like interpolation search, exponential search, jump search, and Fibonacci search are variations of binary search or provide alternatives for specific scenarios.
+
+Search algorithms play a crucial role in various domains, including:
+
+- **Database Management:** In database systems, search algorithms are used to retrieve specific records or data based on search conditions or queries.
+
+- **Information Retrieval:** Search engines use sophisticated algorithms to locate and rank web pages based on search queries.
+
+- **Pathfinding and Routing:** In applications like GPS navigation, algorithms like A* (A-star) search are used to find optimal routes.
+
+- **Data Analysis:** In data analysis, searching is used to locate specific data points or patterns within large datasets.
+
+- **Operating Systems:** In file systems and memory management, searching is used to locate files or data stored in memory.
+
+The choice of a specific search algorithm depends on factors such as the nature of the data, its size, and the desired search efficiency. Some algorithms are more suitable for specific scenarios, and the appropriate choice can significantly impact the performance of the search operation.
+
+
+
+## Linear Search
+
+`Linear Search` is defined as a sequential search algorithm that starts at one end and goes through each element of a list until the desired element is found, otherwise the search continues till the end of the data set.
+
+### How Does Linear Search Algorithm Work?
+In Linear Search Algorithm, 
+Every element is considered as a potential match for the key and checked for the same.
+If any element is found equal to the key, the search is successful and the index of that element is returned.
+If no element is found equal to the key, the search yields “No match found”.
+
+`For example:` Consider the array arr[] = {10, 50, 30, 70, 80, 20, 90, 40} and key = 30
+
+### Advantages of Linear Search:
+1. Linear search can be used irrespective of whether the array is sorted or not. It can be used on arrays of any data type.
+
+2. Does not require any additional memory.
+3. It is a well-suited algorithm for small datasets.
+
+### Drawbacks of Linear Search:
+* Linear search has a time complexity of O(N), which in turn makes it slow for large datasets.
+* Not suitable for large arrays.
+
+### When to use Linear Search?
+* When we are dealing with a small dataset.
+* When you are searching for a dataset stored in contiguous memory.
+
 
 
