@@ -44,5 +44,6 @@ function findMinimumValue(arr) {
   return min;
 }
 
+// Driver code
 let arr = [12, 6, 8, 23, 4, 17];
 console.log(findMinimumValue(arr));
