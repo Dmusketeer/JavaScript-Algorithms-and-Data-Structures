@@ -315,3 +315,64 @@ If no element is found equal to the key, the search yields “No match found”.
 
 
 
+## Binary Search Algorithm
+
+The binary search algorithm is an efficient method for finding a specific element in a sorted collection, such as an array. It repeatedly divides the search range in half until the desired element is found or the search range is empty. Binary search works by comparing the target element with the middle element of the current search range and narrowing down the search based on the result of the comparison. Here's a step-by-step explanation of how binary search works:
+
+1. **Initialization:**
+   - Start with the entire sorted collection.
+   - Set the lower bound `low` to 0 (index of the first element) and the upper bound `high` to the index of the last element.
+
+2. **Midpoint Calculation:**
+   - Calculate the midpoint index as `(low + high) / 2`.
+
+3. **Comparison:**
+   - Compare the middle element with the target element.
+   - If the middle element is equal to the target element, the search is successful, and the index of the element is returned.
+
+4. **Adjusting the Search Range:**
+   - If the middle element is greater than the target element, update the upper bound `high` to be one less than the midpoint index.
+   - If the middle element is less than the target element, update the lower bound `low` to be one more than the midpoint index.
+
+5. **Repeat or Terminate:**
+   - Repeat steps 2-4 until the lower bound `low` is less than or equal to the upper bound `high`. If `low` is greater than `high`, the search range is empty, and the target element is not in the collection.
+
+
+#### Conditions for when to apply Binary Search in a Data Structure:
+  To apply Binary Search algorithm:
+
+  - The data structure must be sorted.
+  - Access to any element of the data structure takes constant time.
+
+### How to Implement Binary Search?
+The Binary Search Algorithm can be implemented in the following two ways
+
+- Iterative Binary Search Algorithm
+- Recursive Binary Search Algorithm
+
+Binary search has a time complexity of O(log n), making it an efficient algorithm for large sorted datasets. It is important to note that binary search requires the collection to be sorted in ascending order for accurate results.
+
+Here's an example of binary search in JavaScript:
+
+```javascript
+function binarySearch(arr, target) {
+  let low = 0;
+  let high = arr.length - 1;
+
+  while (low <= high) {
+    const mid = Math.floor((low + high) / 2);
+
+    if (arr[mid] === target) {
+      return mid; // Element found, return its index.
+    } else if (arr[mid] < target) {
+      low = mid + 1; // Update the lower bound.
+    } else {
+      high = mid - 1; // Update the upper bound.
+    }
+  }
+
+  return -1; // Element not found.
+}
+```
+
+This JavaScript function performs a binary search on a sorted array and returns the index of the target element if found, or -1 if the element is not in the array.
