@@ -350,6 +350,7 @@ The Binary Search Algorithm can be implemented in the following two ways
 - Iterative Binary Search Algorithm
 - Recursive Binary Search Algorithm
 
+
 Binary search has a time complexity of O(log n), making it an efficient algorithm for large sorted datasets. It is important to note that binary search requires the collection to be sorted in ascending order for accurate results.
 
 Here's an example of binary search in JavaScript:
