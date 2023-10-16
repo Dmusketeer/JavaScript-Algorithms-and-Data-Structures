@@ -37,3 +37,23 @@
 // - The target element `target` is an integer.
 
 // You can use this problem statement to implement and practice binary search algorithms in JavaScript.
+
+function binarySearch(arr, target) {
+  let lowbound = 0;
+  let upperbound = arr.length - 1;
+  while (lowbound <= upperbound) {
+    let mid = Math.floor((lowbound + upperbound) / 2);
+    if (arr[mid] === target) {
+      return mid;
+    } else if (arr[mid] < target) {
+      lowbound = mid + 1;
+    } else {
+      upperbound = mid - 1;
+    }
+  }
+  return -1;
+}
+
+const arr = [2, 4, 6, 8, 10, 12, 14, 16];
+const target = 10;
+console.log(binarySearch(arr, target)); // Output: 4
