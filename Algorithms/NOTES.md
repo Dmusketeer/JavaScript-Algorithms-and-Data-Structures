@@ -540,3 +540,42 @@ end procedure
 - Bubble Sort is not the most efficient sorting algorithm, and it is rarely used for large lists. However, it is easy to understand and implement.
 
 - There are more efficient sorting algorithms like Quick Sort and Merge Sort that are commonly used for larger datasets.
+
+
+### **Insertion Sort Algorithm:**
+
+- **Type:** Comparison sort. It builds the final sorted array one item at a time.
+
+- **Efficiency:** Insertion Sort is less efficient on large lists compared to more advanced sorting algorithms like Quick Sort, Merge Sort, or Heap Sort. It has a time complexity of O(n^2) in the worst case.
+
+**How It Works:**
+
+1. The algorithm starts with the second element (index 1) and assumes that the first element is already sorted.
+
+2. It picks the current element (called the "key") and compares it with the elements in the already sorted part of the array.
+
+3. If the key is smaller than an element in the sorted part, it shifts that element to the right to make space for the key.
+
+4. The algorithm continues to move the key leftward in the sorted part until it finds the correct position.
+
+5. This process is repeated for each element in the unsorted part of the array, effectively building the sorted array from left to right.
+
+**Advantages:**
+
+- Simple to understand and implement.
+- Works well for small lists or nearly sorted lists.
+- Requires very little additional memory.
+
+**Disadvantages:**
+
+- Inefficient for large lists.
+- Has a worst-case time complexity of O(n^2).
+- Not a stable sorting algorithm (i.e., it may change the relative order of equal elements).
+
+**Example:**
+
+Consider the array `[64, 34, 25, 12, 22, 11, 90]`. After applying Insertion Sort, the array would become `[11, 12, 22, 25, 34, 64, 90]`. The algorithm repeatedly inserts each element into its correct position in the sorted subarray.
+
+**Use Cases:**
+
+Insertion Sort is suitable for small datasets or situations where the data is already mostly sorted, as it performs well in those cases. For large datasets, more efficient sorting algorithms are generally preferred.
