@@ -22,4 +22,6 @@ const unsortedArray = [6, 3, 8, 5, 2, 7, 4, 1];
 const sortedArray = quickSort(unsortedArray);
 console.log(sortedArray); // Outputs: [1, 2, 3, 4, 5, 6, 7, 8]
 
+// worst case O(n^2)
+// average Case O(nlog(n))
 
