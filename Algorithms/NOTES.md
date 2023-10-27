@@ -665,3 +665,35 @@ Quick Sort is a versatile and efficient sorting algorithm with a well-balanced p
 Overall, Merge Sort is a robust and dependable sorting algorithm suitable for a wide range of applications. Its consistent performance and stability make it a preferred choice in situations where predictability and data preservation are important.
 
 
+## Cartesian Product
+
+**Cartesian Product** is a mathematical operation that combines elements from two or more sets to produce a new set of ordered pairs or tuples. It's an essential concept in set theory and combinatorics and finds applications in various fields, including mathematics, computer science, and statistics. Here are some key notes about the Cartesian Product:
+
+**Basic Concepts:**
+1. **Sets:** The Cartesian Product is typically defined for two or more sets. For example, if you have two sets A and B, their Cartesian Product is denoted as A × B.
+
+2. **Ordered Pairs:** The result of a Cartesian Product is a set of ordered pairs, where each ordered pair contains one element from each of the original sets. For A × B, the ordered pair (a, b) is in the Cartesian Product if 'a' belongs to set A, and 'b' belongs to set B.
+
+**Notation:**
+- The Cartesian Product of sets A and B can be expressed as:
+  A × B = {(a, b) | a ∈ A, b ∈ B}
+
+**Properties:**
+- The number of elements in the Cartesian Product A × B is equal to the product of the number of elements in sets A and B. If A has 'm' elements, and B has 'n' elements, then A × B has 'm * n' ordered pairs.
+
+**Applications:**
+1. **Combinatorics:** Cartesian Products are used to count the number of possibilities in various situations. For example, in a deck of cards, you can determine the number of possible card combinations for a poker hand using Cartesian Products.
+
+2. **Mathematics:** In mathematics, Cartesian Products are used to define mathematical structures like vector spaces, matrices, and more complex algebraic structures.
+
+3. **Computer Science:** Cartesian Products are used in databases to perform joins between tables. They are also fundamental in formal languages and automata theory.
+
+4. **Statistics:** In statistics, the Cartesian Product of sample spaces is used to determine the sample space of combined events.
+
+**Cartesian Product in Programming:**
+- In programming, Cartesian Products can be computed using nested loops. For example, if you have two arrays A and B, you can compute their Cartesian Product using nested loops, where the outer loop iterates over elements of A, and the inner loop iterates over elements of B.
+
+**Cartesian Power:**
+- In some contexts, you may encounter the concept of Cartesian Power, which generalizes the Cartesian Product to n-fold Cartesian Products, where n is a positive integer.
+
+Understanding the Cartesian Product is essential for various mathematical and computational tasks, especially when dealing with combinations, permutations, and analyzing relationships between sets and elements.
