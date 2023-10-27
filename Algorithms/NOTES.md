@@ -579,3 +579,89 @@ Consider the array `[64, 34, 25, 12, 22, 11, 90]`. After applying Insertion Sort
 **Use Cases:**
 
 Insertion Sort is suitable for small datasets or situations where the data is already mostly sorted, as it performs well in those cases. For large datasets, more efficient sorting algorithms are generally preferred.
+
+
+### Quick Sort
+Certainly, here are some key notes about the Quick Sort algorithm:
+
+**Quick Sort Overview:**
+- Quick Sort is an efficient, in-place, and comparison-based sorting algorithm.
+- It follows the divide-and-conquer approach to sort an array by selecting a "pivot" element and partitioning the array into two sub-arrays: elements smaller than the pivot and elements greater than the pivot.
+
+**Steps of Quick Sort:**
+1. **Pivot Selection:**
+   - The choice of the pivot element is crucial for Quick Sort's performance. Common pivot selection strategies include choosing the first, last, middle, or a random element as the pivot.
+   - Optimal pivot selection can lead to better performance.
+   - Common pivot selection strategies include:
+
+         Choosing the first element as the pivot. OR
+         Choosing the last element as the pivot.OR
+         Choosing a random element as the pivot.OR
+         Choosing the median-of-three (median of the first, middle, and last elements) as the pivot for better performance.
+
+2. **Partitioning:**
+   - The array is partitioned into two sub-arrays: elements less than the pivot and elements greater than the pivot.
+   - Two pointers are used to identify pairs of elements in the wrong sub-array, and swaps are made to reposition them.
+   - The pivot itself is in its final sorted position after partitioning.
+
+3. **Recursion:**
+   - The Quick Sort algorithm is applied recursively to the left and right sub-arrays.
+   - Each sub-array is treated as an independent array, and the partitioning and sorting process is repeated until the sub-arrays are sorted (base case: one element in a sub-array).
+
+4. **Combining:**
+   - As the recursion unwinds, the sorted sub-arrays are combined to produce the final sorted array.
+   - The left sub-array, the pivot, and the right sub-array are concatenated to form the sorted array.
+
+**Complexity:**
+- **Average-Case Time Complexity:** O(n log n), where n is the number of elements.
+- **Worst-Case Time Complexity:** O(n^2), but this is rare and can be mitigated with proper pivot selection.
+- **Best-Case Time Complexity:** O(n log n).
+- **Space Complexity:** O(log n) for the recursive call stack.
+
+**Key Points:**
+- Quick Sort is often the preferred choice for sorting large datasets due to its average-case performance.
+- The choice of the pivot element can affect the algorithm's efficiency, and there are strategies to optimize pivot selection.
+- Quick Sort is an in-place sorting algorithm, meaning it doesn't require additional memory.
+- It is widely used in practice and is one of the standard sorting algorithms in programming libraries.
+
+**Variations:**
+- There are variations of Quick Sort, such as Randomized Quick Sort and Three-Way Quick Sort, which aim to further improve performance and mitigate worst-case scenarios.
+
+Quick Sort is a versatile and efficient sorting algorithm with a well-balanced performance profile, making it a popular choice in various applications.
+
+
+### Merge Sort
+
+**Merge Sort** is a popular and efficient sorting algorithm that falls under the category of divide-and-conquer algorithms. It is known for its stability and guaranteed time complexity, making it a reliable choice for sorting large datasets. Here are some key notes about Merge Sort:
+
+**Basic Steps:**
+1. **Divide:** The unsorted array is divided into two equal halves until the sub-arrays contain only one element. This is the "divide" step.
+
+2. **Conquer:** Sub-arrays are sorted individually. This is done by recursively applying the merge sort algorithm to each sub-array, resulting in sorted sub-arrays.
+
+3. **Combine:** The sorted sub-arrays are merged or "combined" to produce a single, sorted array. This step is what makes Merge Sort unique and efficient.
+
+**Key Characteristics:**
+- Merge Sort is stable, meaning it maintains the relative order of equal elements in the sorted output.
+- It is a comparison-based sorting algorithm and works well for various data types, including custom objects and structures.
+- The time complexity of Merge Sort is always O(n log n), making it consistently efficient.
+- Merge Sort has a space complexity of O(n) due to the temporary storage required for merging sub-arrays.
+
+**Advantages:**
+- Reliable Performance: Merge Sort's time complexity remains consistent, regardless of the input data, making it a predictable choice.
+- Stability: It preserves the relative order of equal elements, which is crucial in some applications.
+
+**Disadvantages:**
+- Space Usage: Merge Sort's space complexity can be a drawback when dealing with limited memory resources.
+- Slower for Small Lists: Merge Sort's overhead makes it less efficient than some other algorithms for small lists.
+
+**Applications:**
+- Merge Sort is widely used in external sorting, where data doesn't fit entirely in memory, as it can efficiently sort large datasets using disk-based storage.
+- It serves as a basis for other algorithms, such as merge-based algorithms for merging sorted sequences.
+
+**Variations:**
+- Bottom-Up Merge Sort: An iterative version of Merge Sort that doesn't rely on recursive calls and often uses less memory.
+
+Overall, Merge Sort is a robust and dependable sorting algorithm suitable for a wide range of applications. Its consistent performance and stability make it a preferred choice in situations where predictability and data preservation are important.
+
+
