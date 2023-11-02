@@ -1,4 +1,4 @@
-Certainly! Here are some notes on algorithm design techniques:
+Here are some notes on algorithm design techniques:
 
 1. **Divide and Conquer**:
    - Breaks down a problem into smaller subproblems.
