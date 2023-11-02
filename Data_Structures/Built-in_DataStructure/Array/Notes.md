@@ -9,6 +9,7 @@ Here are some notes on arrays in JavaScript, along with common methods for worki
 - Arrays can contain a mix of data types, including numbers, strings, objects, functions, and even other arrays.
 
 - Arrays in JavaScript are dynamic, which means you can change their length and content easily.
+- An array is iterable. for of loop can be used with array
 
 **Common Array Methods**:
 
