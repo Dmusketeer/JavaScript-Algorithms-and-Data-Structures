@@ -53,7 +53,6 @@ function binarySearch(arr, target) {
   }
   return -1;
 }
-
 const arr = [2, 4, 6, 8, 10, 12, 14, 16];
 const target = 10;
 console.log(binarySearch(arr, target)); // Output: 4
