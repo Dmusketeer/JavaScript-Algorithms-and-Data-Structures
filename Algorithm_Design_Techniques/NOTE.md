@@ -1,3 +1,4 @@
+
 Here are some notes on algorithm design techniques:
 
 1. **Divide and Conquer**:
