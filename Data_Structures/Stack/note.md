@@ -2,6 +2,7 @@ A stack is a fundamental data structure that follows the Last-In-First-Out (LIFO
 
 **Stack Data Structure**:
 
+![stack](./stack.png)
 - A stack is a linear data structure that consists of a collection of elements, with two primary operations: push and pop.
 
 - Elements are added or removed from the top of the stack, which is referred to as the "top" of the stack.
