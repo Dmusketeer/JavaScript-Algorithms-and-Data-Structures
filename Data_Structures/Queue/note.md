@@ -113,3 +113,31 @@ bfs(graph, 'A'); // Performs BFS starting from node 'A'
 ```
 
 Queues are a fundamental data structure in computer science and have various practical applications. They are versatile and commonly used for solving problems that require a specific order of operations.
+
+**`Queues`** are a fundamental data structure in computer science and come in various forms to suit different use cases. Here are some common types of queues:
+
+1. **Basic Queue**: A basic queue follows the First-In-First-Out (FIFO) order, where the first element added is the first to be removed. It has two primary operations, `enqueue` (to add an element to the rear) and `dequeue` (to remove an element from the front).
+
+2. **Priority Queue**: A priority queue assigns a priority level to each element, and the element with the highest priority is removed first. It can be implemented using various data structures like a binary heap or a self-balancing binary search tree.
+
+3. **Double-Ended Queue (Deque)**: A deque is a queue that allows elements to be added or removed from both ends. It has operations like `pushFront`, `pushBack`, `popFront`, and `popBack`.
+
+4. **Circular Queue**: A circular queue is a queue that wraps around at the end. When the rear and front pointers reach the end of the queue, they wrap around to the beginning. It is useful in scenarios where you want to utilize the space efficiently.
+
+5. **Blocking Queue**: A blocking queue is used in multithreading and concurrent programming. It blocks (waits) when trying to `dequeue` an element from an empty queue and blocks when trying to `enqueue` an element to a full queue.
+
+6. **Concurrent Queue**: A concurrent queue is designed to be used in multithreaded or parallel processing environments, ensuring that multiple threads can safely access and modify the queue simultaneously without causing data corruption.
+
+7. **Priority Blocking Queue**: A combination of priority queue and blocking queue, where elements have priorities, and `dequeue` blocks until an element with the highest priority is available.
+
+8. **Counting Queue**: A counting queue maintains a count of the elements currently in the queue, which can be useful for tasks like task scheduling and resource allocation.
+
+9. **Bounded Queue**: A bounded queue has a maximum size, and once it's full, it either rejects new elements or blocks until space becomes available. It's commonly used in scenarios where you want to limit resource consumption.
+
+10. **Delay Queue**: A delay queue holds elements until a certain amount of time has passed before they are available for dequeuing.
+
+11. **Work Queue**: Work queues are often used in task scheduling and parallel processing, where tasks or jobs are added to the queue and processed by worker threads.
+
+12. **LifoQueue (Last-In-First-Out Queue)**: A LIFO queue is essentially a stack, where the last element added is the first to be removed.
+
+The choice of queue type depends on the specific requirements of your application. Each type has its advantages and is suited to different scenarios, such as efficient data retrieval, concurrency, real-time processing, or task scheduling.
