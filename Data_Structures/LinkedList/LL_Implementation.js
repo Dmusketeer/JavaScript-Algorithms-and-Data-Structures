@@ -44,6 +44,24 @@ class LinkdedList {
     }
   }
 
+  insert(value, index) {
+    if (index < 0 || index > this.size) {
+      return;
+    }
+    if (index === 0) {
+      this.prepend(value);
+    } else {
+      const node = new Node(value);
+      let prev = this.head;
+      for (let i = 0; i < index - 1; i++) {
+        prev = prev.next;
+      }
+      node.next = prev.next;
+      prev.next = node;
+      this.size++;
+    }
+  }
+
   append(value) {
     const node = new Node(value);
     if (this.isEmpty()) {
@@ -63,8 +81,16 @@ const list = new LinkdedList();
 console.log("List is Empty? ", list.isEmpty());
 console.log("list size ", list.getSize());
 list.print();
-list.append(10);
+// list.append(10);
+// list.print();
+// list.append(20);
+// list.append(30);
+// list.print();
+
+list.insert(10, 0);
 list.print();
-list.append(20);
-list.append(30);
+
+list.insert(20, 1);
+list.print();
+list.insert(30, 1);
 list.print();
