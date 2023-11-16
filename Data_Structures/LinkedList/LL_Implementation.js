@@ -62,6 +62,26 @@ class LinkdedList {
     }
   }
 
+  removeFrom(index) {
+    if (index < 0 || index >= this.size) {
+      return null;
+    }
+    let removeNode;
+    if (index === 0) {
+      removeNode = this.head;
+      this.head = this.head.next;
+    } else {
+      let prev = this.head;
+      for (let i = 0; i < index - 1; i++) {
+        prev = prev.next;
+      }
+      removeNode = prev.next;
+      prev.next = removeNode.next;
+    }
+    this.size--;
+    return removeNode.value;
+  }
+
   append(value) {
     const node = new Node(value);
     if (this.isEmpty()) {
