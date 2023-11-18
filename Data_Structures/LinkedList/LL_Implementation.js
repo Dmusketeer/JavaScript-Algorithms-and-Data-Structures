@@ -85,6 +85,22 @@ class LinkdedList {
     }
   }
 
+  search(value) {
+    if (this.isEmpty()) {
+      return -1;
+    }
+    let i = 0;
+    let curr = this.head;
+    while (curr) {
+      if (curr.value == value) {
+        return i;
+      }
+      curr = curr.next;
+      i++;
+    }
+    return -1;
+  }
+
   removeFrom(index) {
     if (index < 0 || index >= this.size) {
       return null;
@@ -135,8 +151,7 @@ list.print();
 
 list.insert(20, 1);
 list.print();
-list.insert(30, 1);
+list.insert(30, 2);
 list.print();
 
-list.removeValue(20);
-list.print();
+// console.log(list.search(30));
