@@ -30,6 +30,18 @@ class LinkdedList {
     this.size++;
   }
 
+  reverse() {
+    let prev = null;
+    let curr = this.head;
+    while (curr) {
+      let next = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = next;
+    }
+    this.head = prev;
+  }
+
   print() {
     if (this.isEmpty()) {
       console.log(`List is empty`);
@@ -152,6 +164,8 @@ list.print();
 list.insert(20, 1);
 list.print();
 list.insert(30, 2);
+list.print();
+list.reverse();
 list.print();
 
 // console.log(list.search(30));
